@@ -91,9 +91,24 @@
   !*** ../src/assets/js/main.js ***!
   \********************************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {$('.hamburger').click(function () {
+  $(".hamburger").toggleClass("open");
+  $(".nav").toggleClass("open");
+});
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
+
+/***/ }),
+
+/***/ "jquery":
+/*!*************************!*\
+  !*** external "jQuery" ***!
+  \*************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-
+module.exports = jQuery;
 
 /***/ })
 
