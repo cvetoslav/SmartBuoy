@@ -1579,6 +1579,37 @@ blockquote:last-child {
   height: 50rem;
   background-color: red;
 }
+.section-map .marker-red {
+  background-image: url("../scss/red.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.section-map .marker-yellow {
+  background-image: url("../scss/yellow.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.section-map .marker-green {
+  background-image: url("../scss/green.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.section-map .mapboxgl-popup {
+  max-width: 200px;
+}
+.section-map .mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
 /* ------------------------------------------------------------ *\
 	Section-split
 \* ------------------------------------------------------------ */
