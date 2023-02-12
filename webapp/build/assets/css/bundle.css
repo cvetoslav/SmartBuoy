@@ -636,6 +636,7 @@ blockquote:last-child {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
+  position: relative;
 }
 .grid .grid__col--1of2 {
   max-width: 50%;
@@ -741,6 +742,7 @@ blockquote:last-child {
   color: #9b9b9b;
   font-size: 1.5rem;
   line-height: 1.667;
+  margin-bottom: 2rem;
 }
 .grid__col--border .grid__body h4 {
   color: #000;
@@ -749,7 +751,9 @@ blockquote:last-child {
   max-width: calc(100% - 0.5rem);
 }
 .grid__col--border .grid__btn {
-  margin-top: 2rem;
+  position: absolute;
+  left: 3.25rem;
+  bottom: 4rem;
   font-weight: 700;
   display: inline-block;
   vertical-align: middle;
@@ -1156,7 +1160,7 @@ blockquote:last-child {
 	section-contacts
 \* ------------------------------------------------------------ */
 .section-contacts {
-  padding: 10rem 0 10rem;
+  padding: 2rem 0 10rem;
 }
 .section-contacts h2 {
   margin-bottom: 0.5rem;
