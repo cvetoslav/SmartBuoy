@@ -1,0 +1,32 @@
+//Variables
+$font-size-base             : 1.6rem;
+$font-weight-base           : 400;
+$line-height-base           : 1.2;
+
+$ff-sans-serif              : 'Rubik', sans-serif;
+$ff-serif                   : Georgia, "Times New Roman", Times, serif;
+
+$t-duration                 : 0.4s;
+
+$shell-max-width            : 114rem;
+$shell-gutter               : 1.5rem;
+
+$c-black                    : #000;
+$c-white                    : #fff;
+$c-base                     : #055590;
+$c-green					: #2e78f2;
+$c-grey						: #9b9b9b;
+$c-grey-l 					: #eaeaea;
+
+$responsive-ios             : 812px;
+
+$breakpoints: (
+	mobile-small: 374px,
+	mobile-break: 420px,
+	mobile-medium: 600px,
+	mobile: 767px,
+	admin-bar: 975px,
+	tablet: 1023px,
+	small-desktop: 1199px,
+	large-desktop: 1399px
+);

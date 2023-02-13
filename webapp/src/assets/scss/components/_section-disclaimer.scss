@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\
+	section-disclaimer
+\* ------------------------------------------------------------ */
+
+.section-disclaimer {
+	padding: 4rem 0 8rem;
+
+	.section__head {
+		margin-bottom: 4rem;
+		flex: 0 0 100%;
+	}
+
+	.section__text {
+		height: 100%;
+		font-size: 1.8rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.section__img {
+		height: 100%;
+		padding-left: 5rem;
+		display: flex;
+		align-items: center;
+	}
+
+	.section__image {
+		border-radius: 2rem;
+		overflow: hidden;
+	}
+
+	@include breakpoint-down(tablet) {
+		.grid {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.grid__col--1of2 {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+
+		.section__img {
+			padding: 0;
+			margin-top: 5rem;
+		}
+	}
+
+	@include breakpoint-down(mobile-break) {
+		.section__text {
+			font-size: 1.6rem;
+		}
+	}
+}
+
+.section-disclaimer--reverse {
+	.grid {
+		flex-direction: row-reverse;
+	}
+
+	.section__img {
+		padding: 0 5rem 0 0;
+	}
+}

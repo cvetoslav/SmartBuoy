@@ -1,0 +1,125 @@
+/* ------------------------------------------------------------ *\
+	section-data
+\* ------------------------------------------------------------ */
+
+.section-data {
+	padding: 4rem 0 8rem;
+
+	.section__head {
+		margin-bottom: 4rem;
+		flex: 0 0 100%;
+	}
+
+	.section__card {
+		height: 20rem;
+		border-bottom: 1px solid $c-grey;
+		padding: 2rem;
+		display: flex;
+		align-items: center;
+
+		.grid {
+			width: 100%;
+		}
+
+		.grid__row + .grid__row {
+			margin-top: 1.5rem;
+		}
+
+		.grid__row:first-child {
+			padding: 1.5rem 0;
+			border-bottom: 1px solid $c-grey;
+		}
+
+		p + p {
+			margin-top: 0.6rem;
+		}
+	}
+
+	.grid__col--size2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.section__chart {
+		width: 10rem;
+		height: 10rem;
+		border-width: 0.8rem;
+		border-style: solid;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		transform: rotate(45deg);
+
+		h3 {
+			transform: rotate(-45deg);
+			font-size: 3.2rem;
+		}
+	}
+
+	.section__chart--1 {
+		border-color: $c-grey $c-green $c-green $c-green;
+	}
+
+	.section__chart--2 {
+		border-color: $c-grey $c-grey $c-grey #ff0000;
+	}
+
+	.section__chart--3 {
+		border-color: $c-grey $c-grey #ebde34 #ebde34;
+	}
+
+	.section__chart--4 {
+		border-color: $c-green $c-green $c-green $c-green;
+	}
+
+	.grid__col:nth-child(odd) .section__card {
+		border-left: 1px solid $c-grey;
+	}
+
+	@include breakpoint-down(admin-bar) {
+		.grid__col:nth-child(odd) .section__card {
+			border-left: none;
+		}
+
+		.grid__col--size1 {
+			max-width: 80%;
+			flex: 0 0 80%;
+		}
+
+		.grid__col--size2 {
+			max-width: 20%;
+			flex: 0 0 20%;
+		}
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		.grid__col--size1 {
+			max-width: 70%;
+			flex: 0 0 70%;
+		}
+
+		.grid__col--size2 {
+			max-width: 30%;
+			flex: 0 0 30%;
+		}
+	}
+
+	@include breakpoint-down(mobile-break) {
+		.section__card {
+			padding: 2rem 1rem;
+		}
+
+		.grid__col--size1 {
+			max-width: 65%;
+			flex: 0 0 65%;
+		}
+
+		.grid__col--size2 {
+			max-width: 35%;
+			flex: 0 0 35%;
+		}
+	}
+}

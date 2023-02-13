@@ -1,0 +1,91 @@
+/* ------------------------------------------------------------ *\
+	section-contacts
+\* ------------------------------------------------------------ */
+
+.section-contacts {
+	padding: 2rem 0 10rem;
+
+	h2 {
+		margin-bottom: 0.5rem;
+		margin-left: -0.5rem; 
+	}
+	
+	strong {
+		font-size: 1.6rem;
+		font-family: 'Roboto', sans-serif;
+		color: $c-green;
+		margin-bottom: 1rem;
+		display: block;
+	}
+
+	.section__head {
+		margin-bottom: 5rem;
+	}
+
+	.grid__btn {
+		letter-spacing: 0.05em;
+		border: none;
+		margin-top: 2rem; 
+		font-weight: 700;
+		font-family: Roboto, sans-serif;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		cursor: pointer;
+		text-decoration: none;
+		appearance: none;
+		background-color: #fff;
+		color: #000;
+		line-height: 1;
+		font-size: 1.9rem;
+		padding: 1.5rem 0;
+		border-radius: 0.7rem;
+		transition: color 0.5s, background-color 0.5s, padding 0.5s;
+
+		.grid__btn-dec {
+			position: relative;
+			border-radius: 50%;
+			display: inline-block;
+			width: 3rem;
+			height: 3rem;
+			background-color: $c-green;
+			margin-right: 1rem;
+			transition: background-color 0.5s;
+		}
+
+		.btn__wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.grid__btn-dec:after {
+			content: '';
+			position: absolute;
+			border-width: 0.7rem;
+			border-color: transparent transparent transparent #fff;
+			border-style: solid;
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-22%, -53%);
+			transition: border-color 0.5s;
+		}
+
+		&:hover {
+			background-color: $c-green;
+			color: #fff;
+			padding: 1.5rem 2.3rem;
+
+			.grid__btn-dec {
+				background-color: #fff;
+			}
+
+			.grid__btn-dec:after {
+				border-color: transparent transparent transparent $c-green;
+			}
+		}
+	}
+
+
+}

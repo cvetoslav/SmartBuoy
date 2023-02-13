@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------ *\
+	Section
+\* ------------------------------------------------------------ */
+
+.section {
+	height: 33.5rem; 
+	background-color: #fff;
+	box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.11);
+
+	.section__wrapper {
+		position: relative;
+	}
+
+	.section__inner {
+		position: absolute;
+		height: 40rem;
+		width: 100%;
+		top: -6.5rem;
+		left: 0;
+		background-color: #fff;
+		border-top-right-radius: 3rem;
+		border-top-left-radius: 3rem;
+	}
+
+	@include breakpoint-down(tablet) {
+		height: auto;
+
+		.section__inner {
+			position: relative;
+			top: 0;
+		}
+	}
+
+	@include breakpoint-down(admin-bar) {
+		.section__wrapper {
+			height: 80rem;
+		}
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		.section__wrapper {
+			height: 160rem;
+		}
+	}
+}

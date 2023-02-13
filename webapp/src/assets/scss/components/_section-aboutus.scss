@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\
+	section-aboutus
+\* ------------------------------------------------------------ */
+
+.section-aboutus {
+	padding: 8rem 0 9rem;
+
+	.section__head {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.grid__col {
+		padding: 0 5rem;
+	}
+
+	.section__card {
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	}
+
+	.section__body {
+		padding: 2.5rem;
+		min-height: 21rem;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		p {
+			flex: 0 0 100%;
+		}
+
+		p + p {
+			margin-top: 1.5rem;
+		}
+	}
+
+	@include breakpoint-down(admin-bar) {
+		.grid__col--1of3 {
+			max-width: 48rem;
+			flex: 0 0 48rem;
+		}
+
+		.grid__col {
+			margin: 0 auto;
+			padding: 0 4rem;
+		}
+
+		.grid__col + .grid__col {
+			margin-top: 5rem;
+		}
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		.grid__col--1of3 {
+			max-width: 30rem;
+			flex: 0 0 30rem;
+		}
+
+		.grid__col {
+			margin: 0 auto;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,258 @@
+/* ------------------------------------------------------------ *\
+	Grid
+\* ------------------------------------------------------------ */
+
+.grid {
+	display: flex;
+	flex-flow: row wrap;
+
+	.grid__col {
+		max-width: 100%;
+		flex: 1;
+		position: relative;
+	}
+
+	/*  Grid col 1of2  */
+	.grid__col--1of2 {
+		max-width: 50%;
+		flex: 0 0 50%;
+	}
+
+	/*  Grid col 1of3  */
+	.grid__col--1of3 {
+		max-width: calc(100% / 3);
+		flex: 0 0 calc(100% / 3);
+	}
+
+	/*  Grid col 1of4  */
+	.grid__col--1of4 {
+		max-width: calc(100% / 4);
+		flex: 0 0 calc(100% / 4);
+	}
+
+	.grid__col--size1 {
+		max-width: 70%;
+		flex: 0 0 70%;
+	}
+
+	.grid__col--size2 {
+		max-width: 30%;
+		flex: 0 0 30%;
+	}
+
+	@include breakpoint-down(admin-bar) {
+		.grid__col--1of2 {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+
+		.grid__col--1of4 {
+			max-width: calc(100% / 2);
+			flex: 0 0 calc(100% / 2);
+		}
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		.grid__col--1of4 {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
+}
+
+.grid--fullh {
+	height: 100%;
+
+	.grid__col {
+		height: 100%;
+		position: relative;
+	}
+}
+
+.grid__col--border {
+	padding: 3.25rem;
+
+	
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		display: block;
+	}
+
+	&:before {
+		left: 0;
+		width: 100%;
+		height: 0.4rem;
+		background-color: rgb(234, 234, 234);
+	}
+
+	&:after {
+		left: 50%;
+		width: 0%;
+		height: 0.4rem;
+		transform: translateX(-50%);
+		background-color: $c-green;
+		transition: width 0.5s;
+	}
+	
+	&:hover:after {
+		width: 100%;
+	}
+	.grid__icon-hold {
+		height: 9.4rem;
+		width: 9.4rem;
+		position: relative;
+		margin-bottom: 3rem;
+	}
+
+	.grid__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		transition: top 0.5s;
+	}
+
+	&:hover .grid__icon {
+		top: -1.5rem;
+	}
+
+	.grid__icon:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 70%;
+		height: 70%;
+		display: block;
+		background-color: rgba(27, 96, 207, 0.1);
+		border-radius: 2rem;
+		transition: width 0.5s, height 0.5s;
+	}
+
+	&:hover .grid__icon:before {
+		width: 100%;
+		height: 100%;
+	}
+
+	.grid__body {
+		color: $c-grey;
+		font-size: 1.5rem;
+		line-height: 1.667;
+		margin-bottom: 2rem; 
+	}
+
+	.grid__body h4 {
+		color: #000;
+		margin-bottom: 1rem;
+		line-height: 1.38;
+		max-width: calc(100% - 0.5rem);
+	}
+
+	.grid__btn {
+		position: absolute;
+		left: 3.25rem;
+		bottom: 4rem;
+		font-weight: 700;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		cursor: pointer;
+		text-decoration: none;
+		appearance: none;
+		background-color: #fff;
+		color: #000;
+		line-height: 1;
+		font-size: 1.5rem;
+		padding: 1rem 0;
+		border-radius: 0.7rem;
+		transition: color 0.5s, background-color 0.5s, padding 0.5s;
+
+		.grid__btn-dec {
+			position: relative;
+			border-radius: 50%;
+			display: inline-block;
+			width: 2rem;
+			height: 2rem;
+			background-color: $c-green;
+			margin-right: 1rem;
+			transition: background-color 0.5s;
+		}
+
+		.btn__wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.grid__btn-dec:after {
+			content: '';
+			position: absolute;
+			border-width: 0.5rem;
+			border-color: transparent transparent transparent #fff;
+			border-style: solid;
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-22%, -53%);
+			transition: border-color 0.5s;
+		}
+	}
+
+	&:hover .grid__btn {
+		background-color: $c-green;
+		color: #fff;
+		padding: 1rem 1.7rem;
+
+		.grid__btn-dec {
+			background-color: #fff;
+		}
+
+		.grid__btn-dec:after {
+			border-color: transparent transparent transparent $c-green;
+		}
+	}
+
+	@include breakpoint-down(tablet) {
+		.grid__btn {
+			bottom: 3rem;
+			left: 5rem;
+		}
+	}
+
+	@include breakpoint-down(admin-bar) {
+		&:before {
+			height: 0.1rem;
+		}
+
+		padding: 5rem;
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		padding: 5rem 7rem 5rem;
+
+		.grid__btn {
+			bottom: 4rem;
+			left: 7rem;
+		}
+	}
+
+	@include breakpoint-down(mobile-small) {
+		padding: 5rem 5rem 5rem;
+
+		.grid__btn {
+			left: 5rem;
+		}
+	}
+}
+
+.grid__col--border + .grid__col--border {
+	border-left: 1px solid $c-grey-l;
+}
+
+.grid__col--border:first-child {
+	border-left: 1px solid transparent;
+}

@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------ *\
+	section-map
+\* ------------------------------------------------------------ */
+
+.section-map {
+	padding: 3rem 0 8rem;
+
+	.section__head {
+		margin-bottom: 3rem;
+
+		h2 {
+			font-size: 4.5rem;
+		}
+	}
+
+	.section__map {
+		height: 50rem;
+		background-color: #171717; 
+	}
+
+	.marker-red {
+          background-image: url('../images/red.png');
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+      .marker-yellow {
+          background-image: url('../images/yellow.png');
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+      .marker-green {
+          background-image: url('../images/green.png');
+          background-size: cover;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .mapboxgl-popup {
+          max-width: 200px;
+        }
+
+        .mapboxgl-popup-content {
+          text-align: center;
+          font-family: 'Open Sans', sans-serif;
+        }
+}
