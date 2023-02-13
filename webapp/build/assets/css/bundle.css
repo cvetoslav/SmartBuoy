@@ -1670,6 +1670,54 @@ blockquote:last-child {
 .section-data .grid__col:nth-child(odd) .section__card {
   border-left: 1px solid #9b9b9b;
 }
+@media (max-width: 975px) {
+  .section-data .grid__col:nth-child(odd) .section__card {
+    border-left: none;
+  }
+  .section-data .grid__col--size1 {
+    max-width: 80%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+  }
+  .section-data .grid__col--size2 {
+    max-width: 20%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+  }
+}
+@media (max-width: 600px) {
+  .section-data .grid__col--size1 {
+    max-width: 70%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 70%;
+            flex: 0 0 70%;
+  }
+  .section-data .grid__col--size2 {
+    max-width: 30%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+  }
+}
+@media (max-width: 420px) {
+  .section-data .section__card {
+    padding: 2rem 1rem;
+  }
+  .section-data .grid__col--size1 {
+    max-width: 65%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 65%;
+            flex: 0 0 65%;
+  }
+  .section-data .grid__col--size2 {
+    max-width: 35%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 35%;
+            flex: 0 0 35%;
+  }
+}
 /* ------------------------------------------------------------ *\
 	section-disclaimer
 \* ------------------------------------------------------------ */
