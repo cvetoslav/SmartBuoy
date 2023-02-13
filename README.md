@@ -1,5 +1,6 @@
 ## Inspiration
-The global water pollution problem and the increasing annual drowning cases should not be ignored. We are solving that problem while helping tourism. Drowning is the 3rd leading cause of unintentional injury death worldwide, accounting for 7% of all injury-related deaths according to WHO (World Health Organisation). The annual number of drowning cases is 236 000 worldwide. Many of those cases can be prevented with a modern signal system, whether it is safe to go in the open waters.
+The global water pollution problem and the increasing annual drowning cases should not be ignored. We are solving that problem while helping tourism. Drowning is the **3rd leading cause** of unintentional injury death worldwide, accounting for 7% of all injury-related deaths according to WHO (World Health Organisation). The annual number of drowning cases is **236 000** worldwide. Many of those cases can be prevented with a modern signal system, whether it is safe to go in the open waters.
+
 ## What it does
 The current system consists of flags placed at a close distance of around 50 meters. The flag's colors are different around the world. For example, in Bulgaria, there are three colors: green, yellow, and red. Green - you can swim (no danger), yellow - you are not allowed to go too far in the sea or use inflatables, red - swimming is forbidden.
 
@@ -18,11 +19,13 @@ We also created 3D models and visualizations of a prototype of the "Smart Buoy" 
 
 **Hardware**
 
-We are going to use one 30W solar panel to collect solar energy and transfer the excess energy to the local electricity system. We will also use wave movement energy, which can be created according to Faraday's law.
+We are going to use one 30W solar panel to collect solar energy and transfer the excess energy to the local electricity system. We will also use swell generated energy, which can be harnessed according to Faraday's law for electromagnetic induction.
 
-For the sensors, we are going to use the BME680 air quality, pressure, and temperature sensor, water purity sensor, and gyroscope for the wave height.
+For the sensors, we are going to use the BME680 air quality, pressure, and temperature sensor, water purity sensor, and accelerometer and gyroscope for movement detection.
 
-The 3D model will be 3D printed and covered with fiberglass for water resistance. All of the sensors are going to be placed in the buoy, and the buoy will be moving on its Y axis on a long stick that has a solar panel on the top which helps prevent the buoy to get out of the stick.
+The 3D model will be 3D printed and covered with fiberglass and resin for waterproofness. All of the sensors are going to be placed in the buoy, and the buoy will be moving on its Y axis on a long stick that has a solar panel on the top which helps prevent the buoy to get out of the stick.
+
+The data communication will be realized with the help of a low-power wide area network technology such as LoRaWAN®. The very high physical range of wireless data transfer (7~10 km) is perfect for constructing connected grid with all Smart Buoy units, even the ones in remote areas. Every buoy will relay the information from the others, until the signal finally reaches a receiving station, where the data will be uploaded to the database.
 
 ## Challenges we ran into
 
@@ -34,8 +37,9 @@ We created a lot of software with finished touches in just 60 hours. This requir
 
 ## What we learned
 
-We improved our skills in every segment of the project.
+We improved our skills in every segment of the project, from design to coding.
 
 ## What's next for Smart Buoy
 
 We are going to create the hardware and connect it with the already working software. Then it is time for distribution.
+
